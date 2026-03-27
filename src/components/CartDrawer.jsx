@@ -1,23 +1,17 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
-import { createCheckout } from '../api/shopify'
 import '../styles/CartDrawer.css'
 
 export default function CartDrawer() {
   const { items, removeItem, updateQuantity, total, isOpen, setIsOpen } = useCart()
-  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
-  const handleCheckout = async () => {
+  const handleCheckout = () => {
     if (items.length === 0) return
-    setLoading(true)
-    const url = await createCheckout(items)
-    if (url) {
-      window.location.href = url
-    } else {
-      alert('Checkout is currently unavailable. Please try again later.')
-      setLoading(false)
-    }
+    setIsOpen(false)
+    navigate('/checkout')
   }
 
   return (
@@ -98,13 +92,12 @@ export default function CartDrawer() {
                   </div>
                   <p className="cart-drawer__tax">Shipping & taxes calculated at checkout</p>
                   <motion.button
-                    className={`cart-drawer__checkout ${loading ? 'loading' : ''}`}
+                    className="cart-drawer__checkout"
                     onClick={handleCheckout}
-                    disabled={loading}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    {loading ? 'Preparing Bag...' : 'Checkout →'}
+                    Checkout →
                   </motion.button>
                 </div>
               </>
