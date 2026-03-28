@@ -14,7 +14,7 @@ const IMAGE_POOLS = {
     'https://images.unsplash.com/photo-1614252235316-8c8ec6d812ce',
     'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f',
     'https://images.unsplash.com/photo-1554568218-0f1715e72254',
-    'https://images.unsplash.com/photo-1503341455253-bfe4b6138d48'
+    'https://images.unsplash.com/photo-1503341455253-bfe4b6138d48',
   ],
   bottoms: [
     'https://images.unsplash.com/photo-1541099649105-f69ad21f3246',
@@ -738,6 +738,7 @@ const FALLBACK_PRODUCTS = [
   },
 
   // ---- PREMIUM TOPS COLLECTION (Pexels Editorial) ----
+
   {
     id: 'f-top-1',
     title: 'Silky Walnut Blouse',
@@ -918,7 +919,66 @@ const FALLBACK_PRODUCTS = [
     variants: { edges: ['XS', 'S', 'M', 'L'].map(s => ({ node: { id: `ft12-${s}`, title: `${s} / Natural`, price: { amount: '92.00', currencyCode: 'USD' } } })) },
     source: 'fallback'
   },
-
+  {
+    id: 'f-top-13',
+    title: 'White Crochet Top',
+    handle: 'white-crochet-top',
+    description: 'A pretty crochet top that flows with elegance and grace.',
+    brand: 'DRIP',
+    tags: ['tops', 'new'],
+    priceRange: { minVariantPrice: { amount: '125.00', currencyCode: 'USD' } },
+    compareAtPrice: '160.00',
+    rating: '4.9',
+    stock: 12,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/28378484/pexels-photo-28378484.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'White Crochet Top' } }] },
+    variants: { edges: ['XS', 'S', 'M', 'L'].map(s => ({ node: { id: `ft13-${s}`, title: `${s} / Crochet`, price: { amount: '115.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-top-14',
+    title: 'Street Checkered Corset',
+    handle: 'street-checkered-corset',
+    description: 'A stylish street-ready top with a beautiful checkered pattern.',
+    brand: 'DRIP',
+    tags: ['tops', 'new'],
+    priceRange: { minVariantPrice: { amount: '135.00', currencyCode: 'USD' } },
+    compareAtPrice: '150.00',
+    rating: '4.8',
+    stock: 14,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/11359427/pexels-photo-11359427.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Street Checkered Corset' } }] },
+    variants: { edges: ['XS', 'S', 'M', 'L'].map(s => ({ node: { id: `ft14-${s}`, title: `${s} / Default`, price: { amount: '135.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-top-15',
+    title: 'Vintage Brunette Halter',
+    handle: 'vintage-brunette-halter',
+    description: 'A vintage-inspired halter top for a sophisticated daytime look.',
+    brand: 'DRIP',
+    tags: ['tops', 'new'],
+    priceRange: { minVariantPrice: { amount: '110.00', currencyCode: 'USD' } },
+    compareAtPrice: null,
+    rating: '4.9',
+    stock: 22,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/14544058/pexels-photo-14544058.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Vintage Brunette Halter' } }] },
+    variants: { edges: ['S', 'M', 'L'].map(s => ({ node: { id: `ft15-${s}`, title: `${s} / Default`, price: { amount: '110.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-top-16',
+    title: 'Sunset Sparkle Top',
+    handle: 'sunset-sparkle-top',
+    description: 'An elegant shimmering top that perfectly catches the sunset light.',
+    brand: 'DRIP',
+    tags: ['tops', 'new'],
+    priceRange: { minVariantPrice: { amount: '145.00', currencyCode: 'USD' } },
+    compareAtPrice: '180.00',
+    rating: '5.0',
+    stock: 8,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/34000617/pexels-photo-34000617.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Sunset Sparkle Top' } }] },
+    variants: { edges: ['XS', 'S', 'M'].map(s => ({ node: { id: `ft16-${s}`, title: `${s} / Sparkle`, price: { amount: '145.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
   // ---- PREMIUM DRESS COLLECTION (Pexels Editorial) ----
   {
     id: 'f-dress-1',
@@ -1222,6 +1282,142 @@ const FALLBACK_PRODUCTS = [
   },
 
 
+  // ---- SALE COLLECTION (images borrowed from catalog) ----
+  {
+    id: 'f-sale-1',
+    title: 'Field Leather Overcoat — Sale',
+    handle: 'field-leather-overcoat-sale',
+    description: 'Rugged elegance in a long-line leather overcoat. A bestseller from our outerwear collection, now at a special price.',
+    brand: 'DRIP',
+    tags: ['sale'],
+    priceRange: { minVariantPrice: { amount: '249.00', currencyCode: 'USD' } },
+    compareAtPrice: '450.00',
+    rating: '5.0',
+    stock: 4,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/6406387/pexels-photo-6406387.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Field Leather Overcoat Sale' } }] },
+    variants: { edges: ['S', 'M', 'L'].map(s => ({ node: { id: `fsl1-${s}`, title: `${s} / Mahogany`, price: { amount: '249.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-sale-2',
+    title: 'Noir Sheen Leather — Sale',
+    handle: 'noir-sheen-leather-sale',
+    description: 'High-gloss black leather coat with a distinctive editorial sheen. Drastically reduced for a limited time.',
+    brand: 'DRIP',
+    tags: ['sale'],
+    priceRange: { minVariantPrice: { amount: '198.00', currencyCode: 'USD' } },
+    compareAtPrice: '395.00',
+    rating: '5.0',
+    stock: 5,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/6497713/pexels-photo-6497713.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Noir Sheen Leather Sale' } }] },
+    variants: { edges: ['XS', 'S', 'M'].map(s => ({ node: { id: `fsl2-${s}`, title: `${s} / Raven`, price: { amount: '198.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-sale-3',
+    title: 'Silky Walnut Blouse — Sale',
+    handle: 'silky-walnut-blouse-sale',
+    description: 'A luxurious brown silky top that flows with elegance and grace. Now at an unmissable price.',
+    brand: 'DRIP',
+    tags: ['sale'],
+    priceRange: { minVariantPrice: { amount: '59.00', currencyCode: 'USD' } },
+    compareAtPrice: '125.00',
+    rating: '4.9',
+    stock: 12,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/7710710/pexels-photo-7710710.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Silky Walnut Blouse Sale' } }] },
+    variants: { edges: ['XS', 'S', 'M', 'L'].map(s => ({ node: { id: `fsl3-${s}`, title: `${s} / Walnut`, price: { amount: '59.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-sale-4',
+    title: 'Floral Whisper Camisole — Sale',
+    handle: 'floral-whisper-camisole-sale',
+    description: 'Delicate floral prints on a soft, airy camisole. Stolen from the season — now on final sale.',
+    brand: 'DRIP',
+    tags: ['sale'],
+    priceRange: { minVariantPrice: { amount: '42.00', currencyCode: 'USD' } },
+    compareAtPrice: '95.00',
+    rating: '4.7',
+    stock: 15,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/7742972/pexels-photo-7742972.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Floral Whisper Camisole Sale' } }] },
+    variants: { edges: ['S', 'M', 'L'].map(s => ({ node: { id: `fsl4-${s}`, title: `${s} / Floral`, price: { amount: '42.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-sale-5',
+    title: 'Noir Leather Editorial — Sale',
+    handle: 'noir-leather-editorial-sale',
+    description: 'Bold leather-look pants that demand attention. A premium piece from our bottoms edit, now reduced.',
+    brand: 'DRIP',
+    tags: ['sale'],
+    priceRange: { minVariantPrice: { amount: '79.00', currencyCode: 'USD' } },
+    compareAtPrice: '165.00',
+    rating: '5.0',
+    stock: 8,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/5978296/pexels-photo-5978296.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Noir Leather Editorial Sale' } }] },
+    variants: { edges: ['XS', 'S', 'M'].map(s => ({ node: { id: `fsl5-${s}`, title: `${s} / Onyx`, price: { amount: '79.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-sale-6',
+    title: 'Crimson Sparkle Gala — Sale',
+    handle: 'crimson-sparkle-gala-sale',
+    description: 'Shimmering red gala piece that commands attention. Dramatically reduced — final pieces remaining.',
+    brand: 'DRIP',
+    tags: ['sale'],
+    priceRange: { minVariantPrice: { amount: '199.00', currencyCode: 'USD' } },
+    compareAtPrice: '425.00',
+    rating: '5.0',
+    stock: 2,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/5713296/pexels-photo-5713296.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Crimson Sparkle Gala Sale' } }] },
+    variants: { edges: ['S', 'M', 'L'].map(s => ({ node: { id: `fsl6-${s}`, title: `${s} / Crimson`, price: { amount: '199.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-sale-7',
+    title: 'Editorial Pleated Skirt — Sale',
+    handle: 'editorial-pleated-skirt-sale',
+    description: 'A masterpiece of movement. Pleated to perfection. From our bottoms collection, now at end-of-season pricing.',
+    brand: 'DRIP',
+    tags: ['sale'],
+    priceRange: { minVariantPrice: { amount: '65.00', currencyCode: 'USD' } },
+    compareAtPrice: '140.00',
+    rating: '4.9',
+    stock: 10,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/4663319/pexels-photo-4663319.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Editorial Pleated Skirt Sale' } }] },
+    variants: { edges: ['XS', 'S', 'M'].map(s => ({ node: { id: `fsl7-${s}`, title: `${s} / Cream`, price: { amount: '65.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-sale-8',
+    title: 'Garden Party Dress — Sale',
+    handle: 'garden-party-dress-sale',
+    description: 'A romantic floral dress lifted straight from our dresses edit. Perfect for summer — final sale.',
+    brand: 'DRIP',
+    tags: ['sale'],
+    priceRange: { minVariantPrice: { amount: '98.00', currencyCode: 'USD' } },
+    compareAtPrice: '210.00',
+    rating: '4.9',
+    stock: 7,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Garden Party Dress Sale' } }] },
+    variants: { edges: ['XS', 'S', 'M', 'L'].map(s => ({ node: { id: `fsl8-${s}`, title: `${s} / Floral`, price: { amount: '98.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
+  {
+    id: 'f-sale-9',
+    title: 'Coastal Sand Trench — Sale',
+    handle: 'coastal-sand-trench-sale',
+    description: 'Airy longline beige coat from our outerwear line. Coastal-inspired and now at a steep discount.',
+    brand: 'DRIP',
+    tags: ['sale'],
+    priceRange: { minVariantPrice: { amount: '89.00', currencyCode: 'USD' } },
+    compareAtPrice: '195.00',
+    rating: '4.9',
+    stock: 11,
+    images: { edges: [{ node: { url: 'https://images.pexels.com/photos/7760649/pexels-photo-7760649.jpeg?auto=compress&cs=tinysrgb&w=1600', altText: 'Coastal Sand Trench Sale' } }] },
+    variants: { edges: ['XS', 'S', 'M', 'L'].map(s => ({ node: { id: `fsl9-${s}`, title: `${s} / Sand`, price: { amount: '89.00', currencyCode: 'USD' } } })) },
+    source: 'fallback'
+  },
 
 ]
 
@@ -1265,7 +1461,7 @@ export async function fetchProducts() {
         }
 
         // Ensure Premium Editorial Collections (Dresses, Tops, Bottoms, & Outerwear) are ALWAYS included and prioritized
-        const premiumCollections = FALLBACK_PRODUCTS.filter(p => p.tags.includes('dresses') || p.tags.includes('tops') || p.tags.includes('bottoms') || p.tags.includes('outerwear'))
+        const premiumCollections = FALLBACK_PRODUCTS.filter(p => p.tags.includes('dresses') || p.tags.includes('tops') || p.tags.includes('bottoms') || p.tags.includes('outerwear') || p.tags.includes('sale'))
         const otherProducts = products.filter(p => !p.tags.includes('dresses') && !p.tags.includes('tops') && !p.tags.includes('bottoms') && !p.tags.includes('outerwear'))
         const merged = [...premiumCollections, ...otherProducts]
 

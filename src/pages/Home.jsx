@@ -67,24 +67,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Banner */}
+      {/* Premium Sale Banner */}
       <section className="banner">
         <motion.div
-          className="banner__inner container"
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          className="banner__inner"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="banner__text">
-            <p className="banner__eyebrow">Limited Time</p>
-            <h2 className="banner__heading">Summer Sale<br />Up to 40% Off</h2>
-            <p className="banner__callout">Dresses from $29 · Outerwear from $59</p>
-            <Link to="/sale" className="banner__cta">Shop the Sale →</Link>
-          </div>
-          <div className="banner__imgs">
-            <img src="https://images.unsplash.com/photo-1523350165414-082d792c90a1?w=800&q=80" alt="Summer collection" />
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Editorial look" />
+          <div className="banner__content container">
+            <motion.div 
+              className="banner__text"
+              initial={{ x: -60, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <span className="banner__eyebrow">Seasonal Archive</span>
+              <h2 className="banner__heading">The Summer Edit<br />Final Reductions</h2>
+              <p className="banner__callout">Up to 40% Off Select Outerwear & Dresses</p>
+              <div className="banner__actions">
+                <Link to="/sale" className="banner__cta">
+                  Explore The Sale
+                  <span className="cta-arrow">→</span>
+                </Link>
+                <Link to="/new" className="banner__link">View New Arrivals</Link>
+              </div>
+            </motion.div>
+            
+            <div className="banner__visual">
+              <motion.div 
+                className="banner__img-container"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <img 
+                  src="https://images.pexels.com/photos/29627685/pexels-photo-29627685.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                  alt="Summer Editorial" 
+                  className="banner__img"
+                />
+                <div className="banner__img-overlay" />
+              </motion.div>
+              <motion.div 
+                className="banner__floating-card"
+                initial={{ y: 40, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <span className="promo-badge">Limited</span>
+                <p>Curated styles from our latest photoshoot.</p>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
       </section>

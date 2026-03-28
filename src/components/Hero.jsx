@@ -7,9 +7,9 @@ const MARQUEE_ITEMS = ['NEW ARRIVALS', '☆', 'FREE SHIPPING OVER $150', '★', 
 
 
 const FALLBACK_IMAGES = [
-  "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80",
-  "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&q=80",
-  "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&q=80"
+  "https://images.pexels.com/photos/1381553/pexels-photo-1381553.jpeg",
+  "https://images.pexels.com/photos/5822538/pexels-photo-5822538.jpeg",
+  "https://images.pexels.com/photos/27746373/pexels-photo-27746373.jpeg"
 ];
 
 export default function Hero() {
